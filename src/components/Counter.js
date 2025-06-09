@@ -4,8 +4,8 @@ import classes from './Counter.module.css';
 
 const Counter = () => {
   const dispatch = useDispatch(); // it is a function
-  const counter = useSelector(state => state.counter); // by using useSelector, react automatically subscribes this component to the store
-  const show = useSelector(state => state.showCounter); // by using useSelector, react automatically subscribes this component to the store
+  const counter = useSelector(state => state.counter.counter); // by using useSelector, react automatically subscribes this component to the store
+  const show = useSelector(state => state.counter.showCounter); // by using useSelector, react automatically subscribes this component to the store
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
